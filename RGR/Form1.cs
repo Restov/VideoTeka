@@ -30,7 +30,7 @@ namespace RGR
 
         private void button1_Click(object sender, EventArgs e)
         {
-        
+
             string s = textBox1.Text.ToString();
             try
             {
@@ -42,13 +42,36 @@ namespace RGR
             }
             catch
             {
-               
-                MessageBox.Show("Неверный ввод");
-                
-            }
-   
-            
 
+                MessageBox.Show("Неверный ввод");
+
+            }
+
+
+
+        }
+
+        private void dataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                арендаTableAdapter.InsertQuery(Convert.ToDateTime(dateTimePicker1.Value),
+                        Convert.ToInt32(textBox3.Text), Convert.ToInt32(textBox2.Text));
+                арендаTableAdapter.Update(video_libraryDataSet.Аренда);
+                арендаTableAdapter.Fill(video_libraryDataSet.Аренда);
+            }
+            catch
+            {
+
+                MessageBox.Show("Неверный ввод");
+
+            }
         }
     }
 }
