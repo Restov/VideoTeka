@@ -108,7 +108,7 @@ namespace RGR
                     if (Convert.ToInt32(dataGridView3.Rows[i].Cells[3].Value) == ID)
                     {
                         int a = Convert.ToInt32(dataGridView3.Rows[i].Cells[4].Value);
-                        for (int j = 0; i < dataGridView1.Rows.Count; j++)
+                        for (int j = 0; j < dataGridView1.Rows.Count; j++)
                         {
                             if (a == Convert.ToInt32(dataGridView1.Rows[j].Cells[0].Value))
                             {
