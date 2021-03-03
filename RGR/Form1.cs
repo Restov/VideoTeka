@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.Reporting.WinForms;
 
 namespace RGR
 {
@@ -26,6 +27,8 @@ namespace RGR
             // TODO: данная строка кода позволяет загрузить данные в таблицу "video_libraryDataSet.Фильмы". При необходимости она может быть перемещена или удалена.
             this.фильмыTableAdapter.Fill(this.video_libraryDataSet.Фильмы);
 
+
+            this.reportViewer1.RefreshReport();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -72,6 +75,60 @@ namespace RGR
                 MessageBox.Show("Неверный ввод");
 
             }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+
+
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+        }
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+
+            int ID = 0;
+            try
+            {
+                ID = Convert.ToInt32(textBox4.Text);
+            }
+            catch
+            {
+                MessageBox.Show("Неверный ввод");
+            }
+            string films;
+            films = "";
+            try
+            {
+                for (int i = 0; i < dataGridView3.Rows.Count; i++)
+                {
+                    if (Convert.ToInt32(dataGridView3.Rows[i].Cells[3].Value) == ID)
+                    {
+                        int a = Convert.ToInt32(dataGridView3.Rows[i].Cells[4].Value);
+                        for (int j = 0; i < dataGridView1.Rows.Count; j++)
+                        {
+                            if (a == Convert.ToInt32(dataGridView1.Rows[j].Cells[0].Value))
+                            {
+                                films += dataGridView1.Rows[j].Cells[1].Value.ToString();
+                                films += "\n";
+                                break;
+                            }
+                        }
+
+                    }
+                }
+            }
+            catch(Exception expp)
+            {
+                MessageBox.Show(expp.ToString());
+            }
+            ReportParameterCollection rptparameter = new ReportParameterCollection();
+            rptparameter.Add(new ReportParameter("startdate", films));
+            this.reportViewer1.LocalReport.SetParameters(rptparameter);
+            this.reportViewer1.RefreshReport();
         }
     }
 }
