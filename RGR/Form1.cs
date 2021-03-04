@@ -211,10 +211,10 @@ namespace RGR
                     }
                     var allname = surname + "у " + name[0] + "." + patron[0] + ".";
                     var obr = "\n\nУважаемый " + name + " " + patron + "!";
-                    var pr = "\nУбедительно прошу Вас вернуть фильм " + film + ", который Вы взяли " + date1 + " до " + date2;
+                    var pr = "\nУбедительно прошу Вас вернуть фильм " + film + ", который Вы взяли " + date1 + " до " + date2 + ".";
                     var last = "\n\nЗаранее спасибо";
                     var sign = "Владелец видеотеки";
-                    var date3 = DateTime.Now.ToString();
+                    var date3 = DateTime.Now.ToShortDateString();
 
 
                     string ttf = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Fonts), "ARIAL.TTF");
