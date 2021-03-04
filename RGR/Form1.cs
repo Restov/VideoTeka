@@ -123,7 +123,7 @@ namespace RGR
             {
 
 
-                MessageBox.Show(expp.ToString());
+                MessageBox.Show(expp.Message.ToString());
             }
             
         }
