@@ -94,15 +94,9 @@ namespace RGR
             try
             {
                 ID = Convert.ToInt32(textBox4.Text);
-            }
-            catch
-            {
-                MessageBox.Show("Неверный ввод");
-            }
-            string films;
-            films = "";
-            try
-            {
+                string films;
+                films = "";
+
                 for (int i = 0; i < dataGridView3.Rows.Count; i++)
                 {
                     if (Convert.ToInt32(dataGridView3.Rows[i].Cells[3].Value) == ID)
@@ -120,15 +114,18 @@ namespace RGR
 
                     }
                 }
+                ReportParameterCollection rptparameter = new ReportParameterCollection();
+                rptparameter.Add(new ReportParameter("startdate", films));
+                this.reportViewer1.LocalReport.SetParameters(rptparameter);
+                this.reportViewer1.RefreshReport();
             }
-            catch(Exception expp)
+            catch (Exception expp)
             {
+
+
                 MessageBox.Show(expp.ToString());
             }
-            ReportParameterCollection rptparameter = new ReportParameterCollection();
-            rptparameter.Add(new ReportParameter("startdate", films));
-            this.reportViewer1.LocalReport.SetParameters(rptparameter);
-            this.reportViewer1.RefreshReport();
+            
         }
     }
 }
