@@ -8,6 +8,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.Reporting.WinForms;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+using System.IO;
+using System.Diagnostics;
 
 namespace RGR
 {
@@ -183,7 +187,71 @@ namespace RGR
                     var surname = dataGridView2.Rows[Convert.ToInt32(ID) - 1].Cells[2].Value.ToString();
                     var patron = dataGridView2.Rows[Convert.ToInt32(ID) - 1].Cells[3].Value.ToString();
                     var adress = dataGridView2.Rows[Convert.ToInt32(ID) - 1].Cells[4].Value.ToString();
-                    
+                    var film = "";
+                    var date1 = "";
+                    var date2 = "";
+                    for (int k = 0; k < dataGridView3.Rows.Count; k++)
+                    {
+                        if (dataGridView3.Rows[k].Cells[3].Value.ToString() == ID)
+                        {
+                            int a = Convert.ToInt32(dataGridView3.Rows[k].Cells[4].Value);
+                            for (int j = 0; j < dataGridView1.Rows.Count; j++)
+                            {
+                                if (a == Convert.ToInt32(dataGridView1.Rows[j].Cells[0].Value))
+                                {
+                                    film += dataGridView1.Rows[j].Cells[1].Value.ToString();
+                                    date1 += dataGridView3.Rows[k].Cells[1].Value.ToString();
+                                    date2 += dataGridView3.Rows[k].Cells[2].Value.ToString();
+                                    break;
+                                }
+                            }
+                            break;
+
+                        }
+                    }
+                    var allname = surname + "у " + name[0] + "." + patron[0] + ".";
+                    var obr = "\n\nУважаемый " + name + " " + patron + "!";
+                    var pr = "\nУбедительно прошу Вас вернуть фильм " + film + ", который Вы взяли " + date1 + " до " + date2;
+                    var last = "\n\nЗаранее спасибо";
+                    var sign = "Владелец видеотеки";
+                    var date3 = DateTime.Now.ToString();
+
+
+                    string ttf = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Fonts), "ARIAL.TTF");
+                    var baseFont = BaseFont.CreateFont(ttf, BaseFont.IDENTITY_H, BaseFont.NOT_EMBEDDED);
+                    var font = new iTextSharp.text.Font(baseFont, iTextSharp.text.Font.DEFAULTSIZE, iTextSharp.text.Font.NORMAL);
+                    using (var document = new Document())
+                    using (var stream = new FileStream("Test.pdf", FileMode.Create))
+                    {
+                        document.SetPageSize(PageSize.A4.Rotate());
+                        PdfWriter writer = PdfWriter.GetInstance(document, stream);
+                        document.Open();
+                        Paragraph par = new Paragraph(allname, font);
+                        par.Alignment = Element.ALIGN_RIGHT;
+                        document.Add(par);
+                        par = new Paragraph(adress, font);
+                        par.Alignment = Element.ALIGN_RIGHT;
+                        document.Add(par);
+                        par = new Paragraph(obr, font);
+                        par.Alignment = Element.ALIGN_CENTER;
+                        document.Add(par);
+
+                        par = new Paragraph(pr, font);
+                        par.Alignment = Element.ALIGN_CENTER;
+                        document.Add(par);
+                        par = new Paragraph(last, font);
+                        par.Alignment = Element.ALIGN_RIGHT;
+                        document.Add(par);
+                        par = new Paragraph(sign, font);
+                        par.Alignment = Element.ALIGN_RIGHT;
+                        document.Add(par);
+                        par = new Paragraph(date3, font);
+                        par.Alignment = Element.ALIGN_RIGHT;
+                        document.Add(par);
+                        document.Close();
+                    }
+
+                    Process.Start("Test.pdf");
 
                     break;
                 }
