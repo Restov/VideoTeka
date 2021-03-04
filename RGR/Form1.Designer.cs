@@ -30,30 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.кодDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.названиеDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.жанрDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.странаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.режиссерDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.вРоляхDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.краткаяАннотацияDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.годDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.фильмыBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.videolibraryDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.video_libraryDataSet = new RGR.video_libraryDataSet();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.кодDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.имяDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.фамилияDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.отчествоDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.адресDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.пользователиBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.кодDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.датаВзятияDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.датаВозвратаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.uSERidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fILMidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.арендаBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -74,9 +54,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.пользователиBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.фильмыTableAdapter = new RGR.video_libraryDataSetTableAdapters.ФильмыTableAdapter();
-            this.пользователиTableAdapter = new RGR.video_libraryDataSetTableAdapters.ПользователиTableAdapter();
-            this.арендаTableAdapter = new RGR.video_libraryDataSetTableAdapters.АрендаTableAdapter();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -86,10 +63,34 @@
             this.button4 = new System.Windows.Forms.Button();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.label9 = new System.Windows.Forms.Label();
+            this.кодDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.названиеDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.жанрDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.странаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.режиссерDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.вРоляхDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.краткаяАннотацияDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.годDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.videolibraryDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.video_libraryDataSet = new RGR.video_libraryDataSet();
+            this.кодDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.датаВзятияDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.датаВозвратаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.uSERidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fILMidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.кодDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.имяDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.фамилияDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.отчествоDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.адресDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.фильмыTableAdapter = new RGR.video_libraryDataSetTableAdapters.ФильмыTableAdapter();
+            this.пользователиTableAdapter = new RGR.video_libraryDataSetTableAdapters.ПользователиTableAdapter();
+            this.арендаTableAdapter = new RGR.video_libraryDataSetTableAdapters.АрендаTableAdapter();
+            this.button5 = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
+            this.textBox5 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.фильмыBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.videolibraryDataSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.video_libraryDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.пользователиBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
@@ -101,6 +102,8 @@
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.пользователиBindingSource1)).BeginInit();
             this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.videolibraryDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.video_libraryDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -122,68 +125,10 @@
             this.dataGridView1.Size = new System.Drawing.Size(624, 400);
             this.dataGridView1.TabIndex = 0;
             // 
-            // кодDataGridViewTextBoxColumn
-            // 
-            this.кодDataGridViewTextBoxColumn.DataPropertyName = "Код";
-            this.кодDataGridViewTextBoxColumn.HeaderText = "Код";
-            this.кодDataGridViewTextBoxColumn.Name = "кодDataGridViewTextBoxColumn";
-            // 
-            // названиеDataGridViewTextBoxColumn
-            // 
-            this.названиеDataGridViewTextBoxColumn.DataPropertyName = "Название";
-            this.названиеDataGridViewTextBoxColumn.HeaderText = "Название";
-            this.названиеDataGridViewTextBoxColumn.Name = "названиеDataGridViewTextBoxColumn";
-            // 
-            // жанрDataGridViewTextBoxColumn
-            // 
-            this.жанрDataGridViewTextBoxColumn.DataPropertyName = "Жанр";
-            this.жанрDataGridViewTextBoxColumn.HeaderText = "Жанр";
-            this.жанрDataGridViewTextBoxColumn.Name = "жанрDataGridViewTextBoxColumn";
-            // 
-            // странаDataGridViewTextBoxColumn
-            // 
-            this.странаDataGridViewTextBoxColumn.DataPropertyName = "Страна";
-            this.странаDataGridViewTextBoxColumn.HeaderText = "Страна";
-            this.странаDataGridViewTextBoxColumn.Name = "странаDataGridViewTextBoxColumn";
-            // 
-            // режиссерDataGridViewTextBoxColumn
-            // 
-            this.режиссерDataGridViewTextBoxColumn.DataPropertyName = "Режиссер";
-            this.режиссерDataGridViewTextBoxColumn.HeaderText = "Режиссер";
-            this.режиссерDataGridViewTextBoxColumn.Name = "режиссерDataGridViewTextBoxColumn";
-            // 
-            // вРоляхDataGridViewTextBoxColumn
-            // 
-            this.вРоляхDataGridViewTextBoxColumn.DataPropertyName = "В ролях";
-            this.вРоляхDataGridViewTextBoxColumn.HeaderText = "В ролях";
-            this.вРоляхDataGridViewTextBoxColumn.Name = "вРоляхDataGridViewTextBoxColumn";
-            // 
-            // краткаяАннотацияDataGridViewTextBoxColumn
-            // 
-            this.краткаяАннотацияDataGridViewTextBoxColumn.DataPropertyName = "Краткая аннотация";
-            this.краткаяАннотацияDataGridViewTextBoxColumn.HeaderText = "Краткая аннотация";
-            this.краткаяАннотацияDataGridViewTextBoxColumn.Name = "краткаяАннотацияDataGridViewTextBoxColumn";
-            // 
-            // годDataGridViewTextBoxColumn
-            // 
-            this.годDataGridViewTextBoxColumn.DataPropertyName = "Год";
-            this.годDataGridViewTextBoxColumn.HeaderText = "Год";
-            this.годDataGridViewTextBoxColumn.Name = "годDataGridViewTextBoxColumn";
-            // 
             // фильмыBindingSource
             // 
             this.фильмыBindingSource.DataMember = "Фильмы";
             this.фильмыBindingSource.DataSource = this.videolibraryDataSetBindingSource;
-            // 
-            // videolibraryDataSetBindingSource
-            // 
-            this.videolibraryDataSetBindingSource.DataSource = this.video_libraryDataSet;
-            this.videolibraryDataSetBindingSource.Position = 0;
-            // 
-            // video_libraryDataSet
-            // 
-            this.video_libraryDataSet.DataSetName = "video_libraryDataSet";
-            this.video_libraryDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // dataGridView2
             // 
@@ -200,36 +145,6 @@
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.Size = new System.Drawing.Size(342, 204);
             this.dataGridView2.TabIndex = 1;
-            // 
-            // кодDataGridViewTextBoxColumn1
-            // 
-            this.кодDataGridViewTextBoxColumn1.DataPropertyName = "Код";
-            this.кодDataGridViewTextBoxColumn1.HeaderText = "Код";
-            this.кодDataGridViewTextBoxColumn1.Name = "кодDataGridViewTextBoxColumn1";
-            // 
-            // имяDataGridViewTextBoxColumn
-            // 
-            this.имяDataGridViewTextBoxColumn.DataPropertyName = "Имя";
-            this.имяDataGridViewTextBoxColumn.HeaderText = "Имя";
-            this.имяDataGridViewTextBoxColumn.Name = "имяDataGridViewTextBoxColumn";
-            // 
-            // фамилияDataGridViewTextBoxColumn
-            // 
-            this.фамилияDataGridViewTextBoxColumn.DataPropertyName = "Фамилия";
-            this.фамилияDataGridViewTextBoxColumn.HeaderText = "Фамилия";
-            this.фамилияDataGridViewTextBoxColumn.Name = "фамилияDataGridViewTextBoxColumn";
-            // 
-            // отчествоDataGridViewTextBoxColumn
-            // 
-            this.отчествоDataGridViewTextBoxColumn.DataPropertyName = "Отчество";
-            this.отчествоDataGridViewTextBoxColumn.HeaderText = "Отчество";
-            this.отчествоDataGridViewTextBoxColumn.Name = "отчествоDataGridViewTextBoxColumn";
-            // 
-            // адресDataGridViewTextBoxColumn
-            // 
-            this.адресDataGridViewTextBoxColumn.DataPropertyName = "Адрес";
-            this.адресDataGridViewTextBoxColumn.HeaderText = "Адрес";
-            this.адресDataGridViewTextBoxColumn.Name = "адресDataGridViewTextBoxColumn";
             // 
             // пользователиBindingSource
             // 
@@ -252,36 +167,6 @@
             this.dataGridView3.Size = new System.Drawing.Size(396, 146);
             this.dataGridView3.TabIndex = 2;
             this.dataGridView3.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellContentClick);
-            // 
-            // кодDataGridViewTextBoxColumn2
-            // 
-            this.кодDataGridViewTextBoxColumn2.DataPropertyName = "Код";
-            this.кодDataGridViewTextBoxColumn2.HeaderText = "Код";
-            this.кодDataGridViewTextBoxColumn2.Name = "кодDataGridViewTextBoxColumn2";
-            // 
-            // датаВзятияDataGridViewTextBoxColumn
-            // 
-            this.датаВзятияDataGridViewTextBoxColumn.DataPropertyName = "Дата взятия";
-            this.датаВзятияDataGridViewTextBoxColumn.HeaderText = "Дата взятия";
-            this.датаВзятияDataGridViewTextBoxColumn.Name = "датаВзятияDataGridViewTextBoxColumn";
-            // 
-            // датаВозвратаDataGridViewTextBoxColumn
-            // 
-            this.датаВозвратаDataGridViewTextBoxColumn.DataPropertyName = "Дата возврата";
-            this.датаВозвратаDataGridViewTextBoxColumn.HeaderText = "Дата возврата";
-            this.датаВозвратаDataGridViewTextBoxColumn.Name = "датаВозвратаDataGridViewTextBoxColumn";
-            // 
-            // uSERidDataGridViewTextBoxColumn
-            // 
-            this.uSERidDataGridViewTextBoxColumn.DataPropertyName = "USER-id";
-            this.uSERidDataGridViewTextBoxColumn.HeaderText = "USER-id";
-            this.uSERidDataGridViewTextBoxColumn.Name = "uSERidDataGridViewTextBoxColumn";
-            // 
-            // fILMidDataGridViewTextBoxColumn
-            // 
-            this.fILMidDataGridViewTextBoxColumn.DataPropertyName = "FILM-id";
-            this.fILMidDataGridViewTextBoxColumn.HeaderText = "FILM-id";
-            this.fILMidDataGridViewTextBoxColumn.Name = "fILMidDataGridViewTextBoxColumn";
             // 
             // арендаBindingSource
             // 
@@ -483,18 +368,6 @@
             this.пользователиBindingSource1.DataMember = "Пользователи";
             this.пользователиBindingSource1.DataSource = this.videolibraryDataSetBindingSource;
             // 
-            // фильмыTableAdapter
-            // 
-            this.фильмыTableAdapter.ClearBeforeFill = true;
-            // 
-            // пользователиTableAdapter
-            // 
-            this.пользователиTableAdapter.ClearBeforeFill = true;
-            // 
-            // арендаTableAdapter
-            // 
-            this.арендаTableAdapter.ClearBeforeFill = true;
-            // 
             // reportViewer1
             // 
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "RGR.Report1.rdlc";
@@ -527,12 +400,15 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(140, 26);
             this.button3.TabIndex = 3;
-            this.button3.Text = "button3";
+            this.button3.Text = "Получить данные";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click_1);
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.textBox5);
+            this.tabPage3.Controls.Add(this.label10);
+            this.tabPage3.Controls.Add(this.button5);
             this.tabPage3.Controls.Add(this.button4);
             this.tabPage3.Controls.Add(this.reportViewer2);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
@@ -553,11 +429,11 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(670, 223);
+            this.button4.Location = new System.Drawing.Point(636, 16);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(206, 72);
             this.button4.TabIndex = 1;
-            this.button4.Text = "button4";
+            this.button4.Text = "Получить список";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
@@ -577,6 +453,163 @@
             this.label9.TabIndex = 8;
             this.label9.Text = "Дата возврата";
             // 
+            // кодDataGridViewTextBoxColumn
+            // 
+            this.кодDataGridViewTextBoxColumn.DataPropertyName = "Код";
+            this.кодDataGridViewTextBoxColumn.HeaderText = "Код";
+            this.кодDataGridViewTextBoxColumn.Name = "кодDataGridViewTextBoxColumn";
+            // 
+            // названиеDataGridViewTextBoxColumn
+            // 
+            this.названиеDataGridViewTextBoxColumn.DataPropertyName = "Название";
+            this.названиеDataGridViewTextBoxColumn.HeaderText = "Название";
+            this.названиеDataGridViewTextBoxColumn.Name = "названиеDataGridViewTextBoxColumn";
+            // 
+            // жанрDataGridViewTextBoxColumn
+            // 
+            this.жанрDataGridViewTextBoxColumn.DataPropertyName = "Жанр";
+            this.жанрDataGridViewTextBoxColumn.HeaderText = "Жанр";
+            this.жанрDataGridViewTextBoxColumn.Name = "жанрDataGridViewTextBoxColumn";
+            // 
+            // странаDataGridViewTextBoxColumn
+            // 
+            this.странаDataGridViewTextBoxColumn.DataPropertyName = "Страна";
+            this.странаDataGridViewTextBoxColumn.HeaderText = "Страна";
+            this.странаDataGridViewTextBoxColumn.Name = "странаDataGridViewTextBoxColumn";
+            // 
+            // режиссерDataGridViewTextBoxColumn
+            // 
+            this.режиссерDataGridViewTextBoxColumn.DataPropertyName = "Режиссер";
+            this.режиссерDataGridViewTextBoxColumn.HeaderText = "Режиссер";
+            this.режиссерDataGridViewTextBoxColumn.Name = "режиссерDataGridViewTextBoxColumn";
+            // 
+            // вРоляхDataGridViewTextBoxColumn
+            // 
+            this.вРоляхDataGridViewTextBoxColumn.DataPropertyName = "В ролях";
+            this.вРоляхDataGridViewTextBoxColumn.HeaderText = "В ролях";
+            this.вРоляхDataGridViewTextBoxColumn.Name = "вРоляхDataGridViewTextBoxColumn";
+            // 
+            // краткаяАннотацияDataGridViewTextBoxColumn
+            // 
+            this.краткаяАннотацияDataGridViewTextBoxColumn.DataPropertyName = "Краткая аннотация";
+            this.краткаяАннотацияDataGridViewTextBoxColumn.HeaderText = "Краткая аннотация";
+            this.краткаяАннотацияDataGridViewTextBoxColumn.Name = "краткаяАннотацияDataGridViewTextBoxColumn";
+            // 
+            // годDataGridViewTextBoxColumn
+            // 
+            this.годDataGridViewTextBoxColumn.DataPropertyName = "Год";
+            this.годDataGridViewTextBoxColumn.HeaderText = "Год";
+            this.годDataGridViewTextBoxColumn.Name = "годDataGridViewTextBoxColumn";
+            // 
+            // videolibraryDataSetBindingSource
+            // 
+            this.videolibraryDataSetBindingSource.DataSource = this.video_libraryDataSet;
+            this.videolibraryDataSetBindingSource.Position = 0;
+            // 
+            // video_libraryDataSet
+            // 
+            this.video_libraryDataSet.DataSetName = "video_libraryDataSet";
+            this.video_libraryDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // кодDataGridViewTextBoxColumn2
+            // 
+            this.кодDataGridViewTextBoxColumn2.DataPropertyName = "Код";
+            this.кодDataGridViewTextBoxColumn2.HeaderText = "Код";
+            this.кодDataGridViewTextBoxColumn2.Name = "кодDataGridViewTextBoxColumn2";
+            // 
+            // датаВзятияDataGridViewTextBoxColumn
+            // 
+            this.датаВзятияDataGridViewTextBoxColumn.DataPropertyName = "Дата взятия";
+            this.датаВзятияDataGridViewTextBoxColumn.HeaderText = "Дата взятия";
+            this.датаВзятияDataGridViewTextBoxColumn.Name = "датаВзятияDataGridViewTextBoxColumn";
+            // 
+            // датаВозвратаDataGridViewTextBoxColumn
+            // 
+            this.датаВозвратаDataGridViewTextBoxColumn.DataPropertyName = "Дата возврата";
+            this.датаВозвратаDataGridViewTextBoxColumn.HeaderText = "Дата возврата";
+            this.датаВозвратаDataGridViewTextBoxColumn.Name = "датаВозвратаDataGridViewTextBoxColumn";
+            // 
+            // uSERidDataGridViewTextBoxColumn
+            // 
+            this.uSERidDataGridViewTextBoxColumn.DataPropertyName = "USER-id";
+            this.uSERidDataGridViewTextBoxColumn.HeaderText = "USER-id";
+            this.uSERidDataGridViewTextBoxColumn.Name = "uSERidDataGridViewTextBoxColumn";
+            // 
+            // fILMidDataGridViewTextBoxColumn
+            // 
+            this.fILMidDataGridViewTextBoxColumn.DataPropertyName = "FILM-id";
+            this.fILMidDataGridViewTextBoxColumn.HeaderText = "FILM-id";
+            this.fILMidDataGridViewTextBoxColumn.Name = "fILMidDataGridViewTextBoxColumn";
+            // 
+            // кодDataGridViewTextBoxColumn1
+            // 
+            this.кодDataGridViewTextBoxColumn1.DataPropertyName = "Код";
+            this.кодDataGridViewTextBoxColumn1.HeaderText = "Код";
+            this.кодDataGridViewTextBoxColumn1.Name = "кодDataGridViewTextBoxColumn1";
+            // 
+            // имяDataGridViewTextBoxColumn
+            // 
+            this.имяDataGridViewTextBoxColumn.DataPropertyName = "Имя";
+            this.имяDataGridViewTextBoxColumn.HeaderText = "Имя";
+            this.имяDataGridViewTextBoxColumn.Name = "имяDataGridViewTextBoxColumn";
+            // 
+            // фамилияDataGridViewTextBoxColumn
+            // 
+            this.фамилияDataGridViewTextBoxColumn.DataPropertyName = "Фамилия";
+            this.фамилияDataGridViewTextBoxColumn.HeaderText = "Фамилия";
+            this.фамилияDataGridViewTextBoxColumn.Name = "фамилияDataGridViewTextBoxColumn";
+            // 
+            // отчествоDataGridViewTextBoxColumn
+            // 
+            this.отчествоDataGridViewTextBoxColumn.DataPropertyName = "Отчество";
+            this.отчествоDataGridViewTextBoxColumn.HeaderText = "Отчество";
+            this.отчествоDataGridViewTextBoxColumn.Name = "отчествоDataGridViewTextBoxColumn";
+            // 
+            // адресDataGridViewTextBoxColumn
+            // 
+            this.адресDataGridViewTextBoxColumn.DataPropertyName = "Адрес";
+            this.адресDataGridViewTextBoxColumn.HeaderText = "Адрес";
+            this.адресDataGridViewTextBoxColumn.Name = "адресDataGridViewTextBoxColumn";
+            // 
+            // фильмыTableAdapter
+            // 
+            this.фильмыTableAdapter.ClearBeforeFill = true;
+            // 
+            // пользователиTableAdapter
+            // 
+            this.пользователиTableAdapter.ClearBeforeFill = true;
+            // 
+            // арендаTableAdapter
+            // 
+            this.арендаTableAdapter.ClearBeforeFill = true;
+            // 
+            // button5
+            // 
+            this.button5.Enabled = false;
+            this.button5.Location = new System.Drawing.Point(924, 517);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(138, 30);
+            this.button5.TabIndex = 2;
+            this.button5.Text = "Отправить письмо";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(921, 475);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(116, 13);
+            this.label10.TabIndex = 3;
+            this.label10.Text = "Введите ID должника";
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(924, 491);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(133, 20);
+            this.textBox5.TabIndex = 4;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -588,8 +621,6 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.фильмыBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.videolibraryDataSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.video_libraryDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.пользователиBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
@@ -605,6 +636,9 @@
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.пользователиBindingSource1)).EndInit();
             this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.videolibraryDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.video_libraryDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -667,6 +701,9 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.TextBox textBox5;
     }
 }
 

@@ -129,7 +129,7 @@ namespace RGR
 
         }
         string names = "";
-
+        string ids = "";
         void AddNewD(int id)
         {
 
@@ -138,6 +138,8 @@ namespace RGR
                 if (Convert.ToInt32(dataGridView2.Rows[i].Cells[0].Value) == id)
                 {
                     names += dataGridView2.Rows[i].Cells[1].Value.ToString();
+                    ids += dataGridView2.Rows[i].Cells[0].Value.ToString();
+                    ids += " ";
                     names += " ";
                     names += dataGridView2.Rows[i].Cells[2].Value.ToString();
                     names += "\n";
@@ -150,6 +152,7 @@ namespace RGR
         }
         private void button4_Click(object sender, EventArgs e)
         {
+            button5.Enabled = true;
             for (int i = 0; i < dataGridView3.Rows.Count - 1; i++)
             {
 
@@ -165,6 +168,26 @@ namespace RGR
         private void label5_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            string ID = textBox5.Text.ToString();
+            string[] depts = ids.Split(' ');
+            for (int i = 0; i < depts.Length; i++)
+            {
+                if (depts[i] == ID)
+                {
+
+                    var name = dataGridView2.Rows[Convert.ToInt32(ID) - 1].Cells[1].Value.ToString();
+                    var surname = dataGridView2.Rows[Convert.ToInt32(ID) - 1].Cells[2].Value.ToString();
+                    var patron = dataGridView2.Rows[Convert.ToInt32(ID) - 1].Cells[3].Value.ToString();
+                    var adress = dataGridView2.Rows[Convert.ToInt32(ID) - 1].Cells[4].Value.ToString();
+                    
+
+                    break;
+                }
+            }
         }
     }
 }
