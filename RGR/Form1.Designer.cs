@@ -82,6 +82,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.reportViewer2 = new Microsoft.Reporting.WinForms.ReportViewer();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.фильмыBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.videolibraryDataSetBindingSource)).BeginInit();
@@ -96,6 +97,7 @@
             this.groupBox1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.пользователиBindingSource1)).BeginInit();
+            this.tabPage3.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -525,12 +527,22 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.reportViewer2);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Size = new System.Drawing.Size(1062, 547);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Список должников";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // reportViewer2
+            // 
+            this.reportViewer2.LocalReport.ReportEmbeddedResource = "RGR.Report2.rdlc";
+            this.reportViewer2.Location = new System.Drawing.Point(0, 2);
+            this.reportViewer2.Name = "reportViewer2";
+            this.reportViewer2.ServerReport.BearerToken = null;
+            this.reportViewer2.Size = new System.Drawing.Size(481, 544);
+            this.reportViewer2.TabIndex = 0;
             // 
             // Form1
             // 
@@ -559,6 +571,7 @@
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.пользователиBindingSource1)).EndInit();
+            this.tabPage3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -617,6 +630,7 @@
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.TabPage tabPage3;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer2;
     }
 }
 

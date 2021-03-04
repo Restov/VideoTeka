@@ -29,6 +29,7 @@ namespace RGR
 
 
             this.reportViewer1.RefreshReport();
+            this.reportViewer2.RefreshReport();
         }
 
         private void button1_Click(object sender, EventArgs e)
