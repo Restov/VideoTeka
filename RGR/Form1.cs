@@ -129,9 +129,10 @@ namespace RGR
 
         }
         string names = "";
+
         void AddNewD(int id)
         {
-         
+
             for (int i = 0; i < dataGridView2.Rows.Count - 1; i++)
             {
                 if (Convert.ToInt32(dataGridView2.Rows[i].Cells[0].Value) == id)
@@ -149,20 +150,11 @@ namespace RGR
         }
         private void button4_Click(object sender, EventArgs e)
         {
-            DateTime thisDay = DateTime.Today;
             for (int i = 0; i < dataGridView3.Rows.Count - 1; i++)
             {
-                string[] date = dataGridView3.Rows[i].Cells[2].Value.ToString().Split('.');
-                if (Convert.ToInt32(date[1]) == Convert.ToInt32(thisDay.Month))
-                {
-                    if (Convert.ToInt32(date[0]) >= Convert.ToInt32(thisDay.Day))
-                    {
-                        AddNewD(Convert.ToInt32(dataGridView3.Rows[i].Cells[3].Value));
-                    }
 
-                }
-                else
-                if (Convert.ToInt32(date[1]) > Convert.ToInt32(thisDay.Month))
+
+                if (DateTime.Now > Convert.ToDateTime(dataGridView3.Rows[i].Cells[2].Value))
                 {
                     AddNewD(Convert.ToInt32(dataGridView3.Rows[i].Cells[3].Value));
                 }
