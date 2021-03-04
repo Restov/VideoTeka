@@ -2210,11 +2210,12 @@ namespace RGR.video_libraryDataSetTableAdapters {
             this._commandCollection[2] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[2].Connection = this.Connection;
             this._commandCollection[2].CommandText = "INSERT INTO Аренда\r\n                         ([Дата взятия], [USER-id], [FILM-id]" +
-                ")\r\nVALUES        (?, ?, ?)";
+                ", [Дата возврата])\r\nVALUES        (?, ?, ?, ?)";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[2].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Дата_взятия", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Дата взятия", global::System.Data.DataRowVersion.Current, false, null));
             this._commandCollection[2].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("USER_id", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "USER-id", global::System.Data.DataRowVersion.Current, false, null));
             this._commandCollection[2].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("FILM_id", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "FILM-id", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Дата_возврата", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Дата возврата", global::System.Data.DataRowVersion.Current, false, null));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2474,8 +2475,7 @@ namespace RGR.video_libraryDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, false)]
-        public virtual int InsertQuery(global::System.Nullable<global::System.DateTime> Дата_взятия, global::System.Nullable<int> USER_id, global::System.Nullable<int> FILM_id) {
+        public virtual int InsertQuery(global::System.Nullable<global::System.DateTime> Дата_взятия, global::System.Nullable<int> USER_id, global::System.Nullable<int> FILM_id, global::System.Nullable<global::System.DateTime> Дата_возврата) {
             global::System.Data.OleDb.OleDbCommand command = this.CommandCollection[2];
             if ((Дата_взятия.HasValue == true)) {
                 command.Parameters[0].Value = ((System.DateTime)(Дата_взятия.Value));
@@ -2494,6 +2494,12 @@ namespace RGR.video_libraryDataSetTableAdapters {
             }
             else {
                 command.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((Дата_возврата.HasValue == true)) {
+                command.Parameters[3].Value = ((System.DateTime)(Дата_возврата.Value));
+            }
+            else {
+                command.Parameters[3].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 

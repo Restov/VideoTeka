@@ -66,7 +66,7 @@ namespace RGR
             {
 
                 арендаTableAdapter.InsertQuery(Convert.ToDateTime(dateTimePicker1.Value),
-                        Convert.ToInt32(textBox3.Text), Convert.ToInt32(textBox2.Text));
+                        Convert.ToInt32(textBox3.Text), Convert.ToInt32(textBox2.Text), Convert.ToDateTime(dateTimePicker2.Value));
                 арендаTableAdapter.Update(video_libraryDataSet.Аренда);
                 арендаTableAdapter.Fill(video_libraryDataSet.Аренда);
             }
@@ -126,7 +126,53 @@ namespace RGR
 
                 MessageBox.Show(expp.Message.ToString());
             }
-            
+
+        }
+        string names = "";
+        void AddNewD(int id)
+        {
+         
+            for (int i = 0; i < dataGridView2.Rows.Count - 1; i++)
+            {
+                if (Convert.ToInt32(dataGridView2.Rows[i].Cells[0].Value) == id)
+                {
+                    names += dataGridView2.Rows[i].Cells[1].Value.ToString();
+                    names += " ";
+                    names += dataGridView2.Rows[i].Cells[2].Value.ToString();
+                    names += "\n";
+                }
+            }
+            ReportParameterCollection rptparameter = new ReportParameterCollection();
+            rptparameter.Add(new ReportParameter("nd", names));
+            this.reportViewer2.LocalReport.SetParameters(rptparameter);
+            this.reportViewer2.RefreshReport();
+        }
+        private void button4_Click(object sender, EventArgs e)
+        {
+            DateTime thisDay = DateTime.Today;
+            for (int i = 0; i < dataGridView3.Rows.Count - 1; i++)
+            {
+                string[] date = dataGridView3.Rows[i].Cells[2].Value.ToString().Split('.');
+                if (Convert.ToInt32(date[1]) == Convert.ToInt32(thisDay.Month))
+                {
+                    if (Convert.ToInt32(date[0]) >= Convert.ToInt32(thisDay.Day))
+                    {
+                        AddNewD(Convert.ToInt32(dataGridView3.Rows[i].Cells[3].Value));
+                    }
+
+                }
+                else
+                if (Convert.ToInt32(date[1]) > Convert.ToInt32(thisDay.Month))
+                {
+                    AddNewD(Convert.ToInt32(dataGridView3.Rows[i].Cells[3].Value));
+                }
+            }
+            names = "";
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
