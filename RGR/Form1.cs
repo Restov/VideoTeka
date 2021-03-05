@@ -94,11 +94,9 @@ namespace RGR
         }
         private void button3_Click_1(object sender, EventArgs e)
         {
-
-            int ID = 0;
             try
             {
-                ID = Convert.ToInt32(textBox4.Text);
+                int ID = Convert.ToInt32(textBox4.Text);
                 string films;
                 films = "";
 
@@ -119,8 +117,10 @@ namespace RGR
 
                     }
                 }
-                ReportParameterCollection rptparameter = new ReportParameterCollection();
-                rptparameter.Add(new ReportParameter("startdate", films));
+                ReportParameterCollection rptparameter = new ReportParameterCollection
+                {
+                    new ReportParameter("startdate", films)
+                };
                 this.reportViewer1.LocalReport.SetParameters(rptparameter);
                 this.reportViewer1.RefreshReport();
             }
@@ -149,8 +149,10 @@ namespace RGR
                     names += "\n";
                 }
             }
-            ReportParameterCollection rptparameter = new ReportParameterCollection();
-            rptparameter.Add(new ReportParameter("nd", names));
+            ReportParameterCollection rptparameter = new ReportParameterCollection
+            {
+                new ReportParameter("nd", names)
+            };
             this.reportViewer2.LocalReport.SetParameters(rptparameter);
             this.reportViewer2.RefreshReport();
         }
@@ -171,7 +173,7 @@ namespace RGR
 
         private void label5_Click(object sender, EventArgs e)
         {
-
+            //pass
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -182,7 +184,6 @@ namespace RGR
             {
                 if (depts[i] == ID)
                 {
-
                     var name = dataGridView2.Rows[Convert.ToInt32(ID) - 1].Cells[1].Value.ToString();
                     var surname = dataGridView2.Rows[Convert.ToInt32(ID) - 1].Cells[2].Value.ToString();
                     var patron = dataGridView2.Rows[Convert.ToInt32(ID) - 1].Cells[3].Value.ToString();
@@ -206,12 +207,11 @@ namespace RGR
                                 }
                             }
                             break;
-
                         }
                     }
                     var allname = surname + "у " + name[0] + "." + patron[0] + ".";
                     var obr = "\n\nУважаемый " + name + " " + patron + "!";
-                    var pr = "\nУбедительно прошу Вас вернуть фильм " + '\u0022' +  film + '\u0022' + ", который Вы взяли " + date1 + " до " + date2 + ".";
+                    var pr = "\nУбедительно прошу Вас вернуть фильм " + '\u0022' + film + '\u0022' + ", который Вы взяли " + date1 + " до " + date2 + ".";
                     var last = "\n\nЗаранее спасибо";
                     var sign = "Владелец видеотеки";
                     var date3 = DateTime.Now.ToShortDateString();
@@ -226,27 +226,41 @@ namespace RGR
                         document.SetPageSize(PageSize.A4.Rotate());
                         PdfWriter writer = PdfWriter.GetInstance(document, stream);
                         document.Open();
-                        Paragraph par = new Paragraph(allname, font);
-                        par.Alignment = Element.ALIGN_RIGHT;
+                        Paragraph par = new Paragraph(allname, font)
+                        {
+                            Alignment = Element.ALIGN_RIGHT
+                        };
                         document.Add(par);
-                        par = new Paragraph(adress, font);
-                        par.Alignment = Element.ALIGN_RIGHT;
+                        par = new Paragraph(adress, font)
+                        {
+                            Alignment = Element.ALIGN_RIGHT
+                        };
                         document.Add(par);
-                        par = new Paragraph(obr, font);
-                        par.Alignment = Element.ALIGN_CENTER;
+                        par = new Paragraph(obr, font)
+                        {
+                            Alignment = Element.ALIGN_CENTER
+                        };
                         document.Add(par);
 
-                        par = new Paragraph(pr, font);
-                        par.Alignment = Element.ALIGN_CENTER;
+                        par = new Paragraph(pr, font)
+                        {
+                            Alignment = Element.ALIGN_CENTER
+                        };
                         document.Add(par);
-                        par = new Paragraph(last, font);
-                        par.Alignment = Element.ALIGN_RIGHT;
+                        par = new Paragraph(last, font)
+                        {
+                            Alignment = Element.ALIGN_RIGHT
+                        };
                         document.Add(par);
-                        par = new Paragraph(sign, font);
-                        par.Alignment = Element.ALIGN_RIGHT;
+                        par = new Paragraph(sign, font)
+                        {
+                            Alignment = Element.ALIGN_RIGHT
+                        };
                         document.Add(par);
-                        par = new Paragraph(date3, font);
-                        par.Alignment = Element.ALIGN_RIGHT;
+                        par = new Paragraph(date3, font)
+                        {
+                            Alignment = Element.ALIGN_RIGHT
+                        };
                         document.Add(par);
                         document.Close();
                     }
